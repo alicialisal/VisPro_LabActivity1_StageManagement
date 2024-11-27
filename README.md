@@ -27,11 +27,11 @@ Dalam pengembangan aplikasi Flutter, pengelolaan state adalah hal penting yang m
    - State yang disimpan dapat diakses dari berbagai widget tanpa harus meneruskan data secara manual.
    - Contoh: Shopping cart. Semua halaman (produk, checkout, dll.) dapat mengakses isi keranjang belanja tanpa saling bergantung.
 
-3. **Efisiensi Render Ulang**
+3. **Render Ulang yang lebih efisien**
    - Dengan menggunakan paket seperti `scoped_model` atau solusi lain (Provider, Riverpod, dsb.), hanya widget yang membutuhkan data akan di-*render* ulang. Ini meningkatkan performa aplikasi.
    - Contoh: Jika hanya ikon keranjang belanja di toolbar yang berubah, halaman produk tidak perlu ikut diperbarui.
 
-4. **Sangat Cocok untuk Aplikasi Kompleks**
+4. **Sesuai untuk Aplikasi Kompleks**
    - Dalam aplikasi dengan banyak fitur seperti:
      - **User Authentication:** Status pengguna (login, logout, role pengguna) dapat dikelola secara global.
      - **Shopping Cart:** Data produk, jumlah barang, dan total harga dapat diakses dan diperbarui di seluruh aplikasi.
@@ -44,7 +44,7 @@ Dalam pengembangan aplikasi Flutter, pengelolaan state adalah hal penting yang m
 ### **1. User Authentication**
 State seperti `isLoggedIn` atau `userRole` disimpan dalam model yang dapat diakses dari semua widget. Dengan ini:
 - Halaman login dapat memperbarui status login.
-- Halaman utama atau *dashboard* dapat langsung menampilkan data pengguna yang login.
+- Halaman utama dapat langsung menampilkan data pengguna yang login.
 
 ### **2. Shopping Cart**
 Data keranjang belanja, seperti:
